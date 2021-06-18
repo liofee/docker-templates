@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>qbittorrent</Name>
+  <Repository>linuxserver/qbittorrent</Repository>
+  <Registry>https://hub.docker.com/r/linuxserver/qbittorrent</Registry>
+  <Network>host</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://discourse.linuxserver.io/tag/qbittorrent</Support>
+  <Project>https://github.com/linuxserver/docker-qbittorrent</Project>
+  <Overview>The qBittorrent project aims to provide an open-source software alternative to &#xB5;Torrent.&#xD;
+&#xD;
+Additionally, qBittorrent runs and provides the same features on all major platforms (FreeBSD, Linux, macOS, OS/2, Windows).</Overview>
+  <Category>Downloaders:</Category>
+  <WebUI>https://nas.liofee.fun:[PORT:8080]</WebUI>
+  <TemplateURL>https://github.com/liofee/docker-templates/raw/master/liofee.fun/qbittorrent.xml</TemplateURL>
+  <Icon>https://gitee.com/liofee/docker-templates/raw/master/liofee.fun/img/qbittorrent-icon.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1623977933</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>The qBittorrent project aims to provide an open-source software alternative to &#xB5;Torrent.&#xD;
+&#xD;
+Additionally, qBittorrent runs and provides the same features on all major platforms (FreeBSD, Linux, macOS, OS/2, Windows).</Description>
+  <Networking>
+    <Mode>host</Mode>
+    <Publish/>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/qbittorrent/</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/downloads/</HostDir>
+      <ContainerDir>/downloads</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>99</Value>
+      <Name>PUID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>100</Value>
+      <Name>PGID</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="PUID" Target="PUID" Default="" Mode="" Description="&#x5BB9;&#x5668; Variable: PUID" Type="Variable" Display="advanced" Required="false" Mask="false">99</Config>
+  <Config Name="PGID" Target="PGID" Default="" Mode="" Description="&#x5BB9;&#x5668; Variable: PGID" Type="Variable" Display="advanced" Required="false" Mask="false">100</Config>
+  <Config Name="Config" Target="/config" Default="" Mode="rw" Description="&#x5BB9;&#x5668; Path: /config" Type="Path" Display="advanced" Required="false" Mask="false">/mnt/user/appdata/qbittorrent/</Config>
+  <Config Name="Downloads" Target="/downloads" Default="" Mode="rw" Description="&#x5BB9;&#x5668; Path: /downloads" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/downloads/</Config>
+</Container>

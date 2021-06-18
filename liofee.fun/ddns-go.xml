@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>ddns-go</Name>
+  <Repository>jeessy/ddns-go</Repository>
+  <Registry>https://hub.docker.com/r/jeessy/ddns-go</Registry>
+  <Network>host</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/jeessy2/ddns-go/issues</Support>
+  <Project>https://github.com/jeessy2/ddns-go</Project>
+  <Overview>&#x7B80;&#x5355;&#x597D;&#x7528;&#x7684;DDNS&#x3002;&#x81EA;&#x52A8;&#x66F4;&#x65B0;&#x57DF;&#x540D;&#x89E3;&#x6790;&#x5230;&#x516C;&#x7F51;IP(&#x652F;&#x6301;&#x963F;&#x91CC;&#x4E91;&#x3001;&#x817E;&#x8BAF;&#x4E91;dnspod&#x3001;Cloudflare&#x3001;&#x534E;&#x4E3A;&#x4E91;)&#x3002;</Overview>
+  <Category>Network:DNS</Category>
+  <WebUI>http://[IP]:[PORT:9876]</WebUI>
+  <TemplateURL>https://github.com/liofee/docker-templates/raw/master/liofee.fun/ddns-go.xml</TemplateURL>
+  <Icon>https://gitee.com/liofee/docker-templates/raw/master/liofee.fun/img/ddns-go-icon.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1623973918</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>&#x7B80;&#x5355;&#x597D;&#x7528;&#x7684;DDNS&#x3002;&#x81EA;&#x52A8;&#x66F4;&#x65B0;&#x57DF;&#x540D;&#x89E3;&#x6790;&#x5230;&#x516C;&#x7F51;IP(&#x652F;&#x6301;&#x963F;&#x91CC;&#x4E91;&#x3001;&#x817E;&#x8BAF;&#x4E91;dnspod&#x3001;Cloudflare&#x3001;&#x534E;&#x4E3A;&#x4E91;)&#x3002;</Description>
+  <Networking>
+    <Mode>host</Mode>
+    <Publish/>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/ddns-go</HostDir>
+      <ContainerDir>/root</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>99</Value>
+      <Name>PUID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>100</Value>
+      <Name>PGID</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="PUID" Target="PUID" Default="" Mode="" Description="&#x5BB9;&#x5668; Variable: PUID" Type="Variable" Display="advanced" Required="false" Mask="false">99</Config>
+  <Config Name="PGID" Target="PGID" Default="" Mode="" Description="&#x5BB9;&#x5668; Variable: PGID" Type="Variable" Display="advanced" Required="false" Mask="false">100</Config>
+  <Config Name="Config" Target="/root" Default="" Mode="rw" Description="&#x5BB9;&#x5668; Path: /root" Type="Path" Display="advanced" Required="false" Mask="false">/mnt/user/appdata/ddns-go</Config>
+</Container>

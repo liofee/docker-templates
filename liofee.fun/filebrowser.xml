@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>filebrowser</Name>
+  <Repository>80x86/filebrowser</Repository>
+  <Registry>https://hub.docker.com/r/80x86/filebrowser</Registry>
+  <Network>host</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/filebrowser/filebrowser/issues</Support>
+  <Project>https://github.com/filebrowser/filebrowser</Project>
+  <Overview>File Browser provides a file managing interface within a specified directory and it can be used to upload, delete, preview, rename and edit your files. It allows the creation of multiple users and each user can have its own directory.</Overview>
+  <Category>Tools:</Category>
+  <WebUI>https://nas.liofee.fun:[PORT:8082]</WebUI>
+  <TemplateURL>https://github.com/liofee/docker-templates/raw/master/liofee.fun/filebrowser.xml</TemplateURL>
+  <Icon>https://gitee.com/liofee/docker-templates/raw/master/liofee.fun/img/filebrowser-icon.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1623978930</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>File Browser provides a file managing interface within a specified directory and it can be used to upload, delete, preview, rename and edit your files. It allows the creation of multiple users and each user can have its own directory.</Description>
+  <Networking>
+    <Mode>host</Mode>
+    <Publish/>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/filebrowser</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/</HostDir>
+      <ContainerDir>/myfiles</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>99</Value>
+      <Name>PUID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>100</Value>
+      <Name>PGID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>on</Value>
+      <Name>FB_SSL</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="Config" Target="/config" Default="" Mode="rw" Description="&#x5BB9;&#x5668; Path: /config" Type="Path" Display="advanced" Required="false" Mask="false">/mnt/user/appdata/filebrowser</Config>
+  <Config Name="PUID" Target="PUID" Default="" Mode="" Description="&#x5BB9;&#x5668; Variable: PUID" Type="Variable" Display="advanced" Required="false" Mask="false">99</Config>
+  <Config Name="PGID" Target="PGID" Default="" Mode="" Description="&#x5BB9;&#x5668; Variable: PGID" Type="Variable" Display="advanced" Required="false" Mask="false">100</Config>
+  <Config Name="MyFile" Target="/myfiles" Default="" Mode="rw" Description="&#x5BB9;&#x5668; Path: /myfiles" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/</Config>
+  <Config Name="device" Target="" Default="" Mode="" Description="&#x5BB9;&#x5668; Device: " Type="Device" Display="always" Required="false" Mask="false">/dev/dri/renderD128</Config>
+  <Config Name="SSL" Target="FB_SSL" Default="" Mode="" Description="&#x5BB9;&#x5668; Variable: FB_SSL" Type="Variable" Display="always" Required="false" Mask="false">on</Config>
+</Container>
