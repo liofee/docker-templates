@@ -63,7 +63,7 @@
   <Config Name="PUID" Target="PUID" Default="" Mode="" Description="&#x5BB9;&#x5668; Variable: PUID" Type="Variable" Display="advanced" Required="false" Mask="false">99</Config>
   <Config Name="PGID" Target="PGID" Default="" Mode="" Description="&#x5BB9;&#x5668; Variable: PGID" Type="Variable" Display="advanced" Required="false" Mask="false">100</Config>
   <Config Name="Config" Target="/config" Default="" Mode="rw" Description="&#x5BB9;&#x5668; Path: /config" Type="Path" Display="advanced" Required="false" Mask="false">/mnt/user/appdata/jellyfin/</Config>
-  <Config Name="Cache" Target="/cache" Default="" Mode="rw" Description="&#x5BB9;&#x5668; Path: /cache" Type="Path" Display="advanced" Required="false" Mask="false">/mnt/user/appdata/jellyfin/cache/</Config>
+  <Config Name="Cache" Target="/cache" Default="" Mode="rw" Description="&#x5BB9;&#x5668; Path: /cache" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/jellyfin/cache/</Config>
   <Config Name="Media" Target="/media" Default="" Mode="rw" Description="&#x5BB9;&#x5668; Path: /media" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/media/</Config>
   <Config Name="Proxy" Target="ALL_PROXY" Default="" Mode="" Description="&#x5BB9;&#x5668; Variable: ALL_PROXY" Type="Variable" Display="always" Required="false" Mask="false">http://10.10.10.166:10809</Config>
   <Config Name="device" Target="" Default="" Mode="" Description="&#x5BB9;&#x5668; Device: " Type="Device" Display="always" Required="false" Mask="false">/dev/dri/</Config>
