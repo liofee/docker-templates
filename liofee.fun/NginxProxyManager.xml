@@ -53,12 +53,12 @@ changeme</Description>
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/cache/appdata/Nginx-Proxy-Manager-Official/data</HostDir>
+      <HostDir>/mnt/cache/appdata/NginxProxyManager/data</HostDir>
       <ContainerDir>/data</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
     <Volume>
-      <HostDir>/mnt/cache/appdata/Nginx-Proxy-Manager-Official/letsencrypt</HostDir>
+      <HostDir>/mnt/cache/appdata/NginxProxyManager/letsencrypt</HostDir>
       <ContainerDir>/etc/letsencrypt</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
@@ -84,8 +84,8 @@ changeme</Description>
   <Config Name="WebUI" Target="81" Default="" Mode="tcp" Description="Container Port: 81" Type="Port" Display="always" Required="false" Mask="false">81</Config>
   <Config Name="HTTP Port" Target="80" Default="" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="false" Mask="false">80</Config>
   <Config Name="HTTPS Port" Target="443" Default="" Mode="tcp" Description="Container Port: 443" Type="Port" Display="always" Required="false" Mask="false">443</Config>
-  <Config Name="Data" Target="/data" Default="" Mode="rw" Description="Container Path: /data" Type="Path" Display="always" Required="false" Mask="false">/mnt/cache/appdata/Nginx-Proxy-Manager-Official/data</Config>
-  <Config Name="Certificates" Target="/etc/letsencrypt" Default="" Mode="rw" Description="Container Path: /etc/letsencrypt" Type="Path" Display="always" Required="false" Mask="false">/mnt/cache/appdata/Nginx-Proxy-Manager-Official/letsencrypt</Config>
+  <Config Name="Data" Target="/data" Default="" Mode="rw" Description="Container Path: /data" Type="Path" Display="always" Required="false" Mask="false">/mnt/cache/appdata/NginxProxyManager/data</Config>
+  <Config Name="Certificates" Target="/etc/letsencrypt" Default="" Mode="rw" Description="Container Path: /etc/letsencrypt" Type="Path" Display="always" Required="false" Mask="false">/mnt/cache/appdata/NginxProxyManager/letsencrypt</Config>
   <Config Name="Host Key 1" Target="DB_SQLITE_FILE" Default="" Mode="" Description="Container Variable: DB_SQLITE_FILE" Type="Variable" Display="always" Required="false" Mask="false">/data/database.sqlite</Config>
   <Config Name="PUID" Target="PUID" Default="" Mode="" Description="&#x5BB9;&#x5668; Variable: PUID" Type="Variable" Display="advanced" Required="false" Mask="false">99</Config>
   <Config Name="PGID" Target="PGID" Default="" Mode="" Description="&#x5BB9;&#x5668; Variable: PGID" Type="Variable" Display="advanced" Required="false" Mask="false">100</Config>
