@@ -18,14 +18,12 @@ Password:&#xD;
 changeme</Overview>
   <Category>Tools:Utilities Other: Network:Web Network:Proxy Network:Management Network:Other</Category>
   <WebUI>http://[IP]:[PORT:81]</WebUI>
-  <TemplateURL>https://raw.githubusercontent.com/mgutt/unraid-docker-templates/main/mgutt/Nginx-Proxy-Manager-Official.xml</TemplateURL>
-  <Icon>https://nginxproxymanager.com/icon.png</Icon>
+  <TemplateURL>https://raw.githubusercontent.com/liofee/docker-templates/main/liofee.fun/NginxProxyManager.xml</TemplateURL>
+  <Icon>https://gitee.com/liofee/docker-templates/raw/master/liofee.fun/img/nginxproxymanager-icon.png</Icon>
   <ExtraParams>--memory=1G --no-healthcheck</ExtraParams>
   <PostArgs/>
   <CPUset/>
   <DateInstalled>1627392008</DateInstalled>
-  <DonateText>If you like my work please consider Donating.</DonateText>
-  <DonateLink>https://www.paypal.me/marcgutt</DonateLink>
   <Description>Nginx Proxy Manager (NPM) allows adding proxy hosts through a password-protected multi-user WebUI. Add free Let's Encrypt SSL certificates to secure your web services. They are renewed by NPM automatically.&#xD;
 &#xD;
 Default login:&#xD;
