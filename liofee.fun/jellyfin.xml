@@ -23,7 +23,28 @@
   <Description>Jellyfin is a Free Software Media System that puts you in control of managing and streaming your media. It is an alternative to the proprietary Emby and Plex, to provide media from a dedicated server to end-user devices via multiple apps. Jellyfin is descended from Emby's 3.5.2 release and ported to the .NET Core framework to enable full cross-platform support. There are no strings attached, no premium licenses or features, and no hidden agendas: just a team who want to build something better and work together to achieve it. We welcome anyone who is interested in joining us in our quest!</Description>
   <Networking>
     <Mode>host</Mode>
-    <Publish/>
+    <Publish>
+      <Port>
+        <HostPort>8096</HostPort>
+        <ContainerPort>8096</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>8920</HostPort>
+        <ContainerPort>8920</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>7359</HostPort>
+        <ContainerPort>7359</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>1900</HostPort>
+        <ContainerPort>1900</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
+    </Publish>
   </Networking>
   <Data>
     <Volume>
@@ -65,6 +86,10 @@
     </Variable>
   </Environment>
   <Labels/>
+  <Config Name="WebUI Port" Target="8096" Default="" Mode="tcp" Description="WebUI Port - Default 8096" Type="Port" Display="always" Required="false" Mask="false">8096</Config>
+  <Config Name="Https WebUI Port" Target="8920" Default="" Mode="tcp" Description="Https WebUI Port - Default 8920" Type="Port" Display="always" Required="false" Mask="false">8920</Config>
+  <Config Name="API Port" Target="7359" Default="" Mode="udp" Description="API Port - Default 7359" Type="Port" Display="always" Required="false" Mask="false">7359</Config>
+  <Config Name="API Port" Target="1900" Default="" Mode="udp" Description="API Port - Default 1900" Type="Port" Display="always" Required="false" Mask="false">1900</Config>
   <Config Name="PUID" Target="PUID" Default="" Mode="" Description="&#x5BB9;&#x5668; Variable: PUID" Type="Variable" Display="advanced" Required="false" Mask="false">99</Config>
   <Config Name="PGID" Target="PGID" Default="" Mode="" Description="&#x5BB9;&#x5668; Variable: PGID" Type="Variable" Display="advanced" Required="false" Mask="false">100</Config>
   <Config Name="Config" Target="/config" Default="" Mode="rw" Description="&#x5BB9;&#x5668; Path: /config" Type="Path" Display="advanced" Required="false" Mask="false">/mnt/user/appdata/jellyfin/</Config>
