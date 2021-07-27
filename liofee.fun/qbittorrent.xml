@@ -27,7 +27,23 @@ Additionally, qBittorrent runs and provides the same features on all major platf
 Additionally, qBittorrent runs and provides the same features on all major platforms (FreeBSD, Linux, macOS, OS/2, Windows).</Description>
   <Networking>
     <Mode>host</Mode>
-    <Publish/>
+    <Publish>
+      <Port>
+        <HostPort>6881</HostPort>
+        <ContainerPort>6881</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>6881</HostPort>
+        <ContainerPort>6881</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>8080</HostPort>
+        <ContainerPort>8080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
   </Networking>
   <Data>
     <Volume>
@@ -54,6 +70,9 @@ Additionally, qBittorrent runs and provides the same features on all major platf
     </Variable>
   </Environment>
   <Labels/>
+  <Config Name="WebUI Port" Target="8080" Default="" Mode="tcp" Description="WebUI Port - Default 8080" Type="Port" Display="always" Required="false" Mask="false">8080</Config>
+  <Config Name="API Port" Target="6881" Default="" Mode="tcp" Description="API Port - Default 6881" Type="Port" Display="always" Required="false" Mask="false">6881</Config>
+  <Config Name="API Port" Target="6881" Default="" Mode="udp" Description="API Port - Default 6881" Type="Port" Display="always" Required="false" Mask="false">6881</Config>
   <Config Name="PUID" Target="PUID" Default="" Mode="" Description="&#x5BB9;&#x5668; Variable: PUID" Type="Variable" Display="advanced" Required="false" Mask="false">99</Config>
   <Config Name="PGID" Target="PGID" Default="" Mode="" Description="&#x5BB9;&#x5668; Variable: PGID" Type="Variable" Display="advanced" Required="false" Mask="false">100</Config>
   <Config Name="Config" Target="/config" Default="" Mode="rw" Description="&#x5BB9;&#x5668; Path: /config" Type="Path" Display="advanced" Required="false" Mask="false">/mnt/user/appdata/qbittorrent/</Config>
