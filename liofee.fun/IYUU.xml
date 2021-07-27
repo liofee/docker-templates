@@ -23,7 +23,13 @@
   <Description>IYUUAutoReseed&#x9879;&#x76EE;&#x7684;&#x5347;&#x7EA7;&#x7248;&#xFF0C;&#x5E38;&#x9A7B;&#x5185;&#x5B58;&#x8FD0;&#x884C;&#xFF1B;&#x96C6;&#x6210;webui&#x754C;&#x9762;&#x3001;&#x8F85;&#x79CD;&#x3001;&#x4E0B;&#x8F7D;&#x3001;&#x5B9A;&#x65F6;&#x8BBF;&#x95EE;URL&#x3001;&#x52A8;&#x6001;&#x57DF;&#x540D;ddns&#x7B49;&#x5E38;&#x7528;&#x529F;&#x80FD;&#xFF0C;&#x63D0;&#x4F9B;&#x5B8C;&#x5584;&#x7684;&#x63D2;&#x4EF6;&#x673A;&#x5236;&#x3002;</Description>
   <Networking>
     <Mode>host</Mode>
-    <Publish/>
+    <Publish>
+      <Port>
+        <HostPort>8787</HostPort>
+        <ContainerPort>8787</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
   </Networking>
   <Data>
     <Volume>
@@ -50,6 +56,7 @@
     </Variable>
   </Environment>
   <Labels/>
+  <Config Name="WebUI Port" Target="8787" Default="" Mode="tcp" Description="WebUI Port - Default 8787" Type="Port" Display="always" Required="false" Mask="false">8787</Config>
   <Config Name="Config" Target="/IYUU/db" Default="" Mode="rw" Description="&#x5BB9;&#x5668; Path: /IYUU/db" Type="Path" Display="advanced" Required="false" Mask="false">/mnt/user/appdata/IYUU/db</Config>
   <Config Name="PUID" Target="PUID" Default="" Mode="" Description="&#x5BB9;&#x5668; Variable: PUID" Type="Variable" Display="advanced" Required="false" Mask="false">99</Config>
   <Config Name="PGID" Target="PGID" Default="" Mode="" Description="&#x5BB9;&#x5668; Variable: PGID" Type="Variable" Display="advanced" Required="false" Mask="false">100</Config>
