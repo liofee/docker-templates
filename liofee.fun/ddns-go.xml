@@ -23,7 +23,13 @@
   <Description>&#x7B80;&#x5355;&#x597D;&#x7528;&#x7684;DDNS&#x3002;&#x81EA;&#x52A8;&#x66F4;&#x65B0;&#x57DF;&#x540D;&#x89E3;&#x6790;&#x5230;&#x516C;&#x7F51;IP(&#x652F;&#x6301;&#x963F;&#x91CC;&#x4E91;&#x3001;&#x817E;&#x8BAF;&#x4E91;dnspod&#x3001;Cloudflare&#x3001;&#x534E;&#x4E3A;&#x4E91;)&#x3002;</Description>
   <Networking>
     <Mode>host</Mode>
-    <Publish/>
+    <Publish>
+      <Port>
+        <HostPort>9876</HostPort>
+        <ContainerPort>9876</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
   </Networking>
   <Data>
     <Volume>
@@ -45,6 +51,7 @@
     </Variable>
   </Environment>
   <Labels/>
+  <Config Name="WebUI Port" Target="9876" Default="" Mode="tcp" Description="WebUI Port - Default 9876" Type="Port" Display="always" Required="false" Mask="false">9876</Config>
   <Config Name="PUID" Target="PUID" Default="" Mode="" Description="&#x5BB9;&#x5668; Variable: PUID" Type="Variable" Display="advanced" Required="false" Mask="false">99</Config>
   <Config Name="PGID" Target="PGID" Default="" Mode="" Description="&#x5BB9;&#x5668; Variable: PGID" Type="Variable" Display="advanced" Required="false" Mask="false">100</Config>
   <Config Name="Config" Target="/root" Default="" Mode="rw" Description="&#x5BB9;&#x5668; Path: /root" Type="Path" Display="advanced" Required="false" Mask="false">/mnt/user/appdata/ddns-go</Config>
