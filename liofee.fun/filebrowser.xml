@@ -23,7 +23,13 @@
   <Description>File Browser provides a file managing interface within a specified directory and it can be used to upload, delete, preview, rename and edit your files. It allows the creation of multiple users and each user can have its own directory.</Description>
   <Networking>
     <Mode>host</Mode>
-    <Publish/>
+    <Publish>
+      <Port>
+        <HostPort>8082</HostPort>
+        <ContainerPort>8082</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
   </Networking>
   <Data>
     <Volume>
@@ -55,6 +61,7 @@
     </Variable>
   </Environment>
   <Labels/>
+  <Config Name="WEB_PORT" Target="8082" Default="" Mode="tcp" Description="WEB_PORT - Default 8082" Type="Port" Display="always" Required="false" Mask="false">8082</Config>
   <Config Name="Config" Target="/config" Default="" Mode="rw" Description="&#x5BB9;&#x5668; Path: /config" Type="Path" Display="advanced" Required="false" Mask="false">/mnt/user/appdata/filebrowser</Config>
   <Config Name="PUID" Target="PUID" Default="" Mode="" Description="&#x5BB9;&#x5668; Variable: PUID" Type="Variable" Display="advanced" Required="false" Mask="false">99</Config>
   <Config Name="PGID" Target="PGID" Default="" Mode="" Description="&#x5BB9;&#x5668; Variable: PGID" Type="Variable" Display="advanced" Required="false" Mask="false">100</Config>
