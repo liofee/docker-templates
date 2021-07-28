@@ -32,7 +32,7 @@ admin@example.com&#xD;
 Password:&#xD;
 changeme</Description>
   <Networking>
-    <Mode>proxy</Mode>
+    <Mode>host</Mode>
     <Publish>
       <Port>
         <HostPort>81</HostPort>
