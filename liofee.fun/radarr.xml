@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>radarr</Name>
+  <Repository>linuxserver/radarr:latest</Repository>
+  <Registry>https://hub.docker.com/r/linuxserver/radarr</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project/>
+  <Overview>Radarr</Overview>
+  <Category/>
+  <WebUI>http://[IP]:[PORT:7878]</WebUI>
+  <TemplateURL>https://gitee.com/liofee/docker-templates/raw/master/liofee.fun/radarr.xml</TemplateURL>
+  <Icon>https://gitee.com/liofee/docker-templates/raw/master/liofee.fun/img/radarr-icon.png</Icon>
+  <ExtraParams>--add-host=api.themoviedb.org:54.192.18.12</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="WebUI" Target="7878" Default="" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">7878</Config>
+  <Config Name="TimeZone" Target="TZ" Default="" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">Asia/Shanghai</Config>
+  <Config Name="Home" Target="/liofee" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/disk2/liofee/</Config>
+  <Config Name="Config" Target="/config" Default="" Mode="rw" Description="" Type="Path" Display="advanced" Required="true" Mask="false">/mnt/user/appdata/radarr</Config>
+  <Config Name="PUID" Target="PUID" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="true" Mask="false">99</Config>
+  <Config Name="PGID" Target="PGID" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="true" Mask="false">100</Config>
+  <Config Name="UMASK" Target="UMASK" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="true" Mask="false">022</Config>
+</Container>

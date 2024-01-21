@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>qbittorrent</Name>
+  <Repository>linuxserver/qbittorrent:latest</Repository>
+  <Registry>https://hub.docker.com/r/linuxserver/qbittorrent</Registry>
+  <Network>host</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project/>
+  <Overview>qBittorrent</Overview>
+  <Category/>
+  <WebUI>http://[IP]:[PORT:8080]</WebUI>
+  <TemplateURL>https://gitee.com/liofee/docker-templates/raw/master/liofee.fun/qbittorrent.xml</TemplateURL>
+  <Icon>https://gitee.com/liofee/docker-templates/raw/master/liofee.fun/img/qbittorrent-icon.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="WEBUI_PORT" Target="WEBUI_PORT" Default="" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">8080</Config>
+  <Config Name="TimeZone" Target="TZ" Default="" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">Asia/Shanghai</Config>
+  <Config Name="Home" Target="/liofee" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/disk2/liofee/</Config>
+  <Config Name="BitTorrent" Target="/bittorrent" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/disk1/documents/bittorrent/</Config>
+  <Config Name="Config" Target="/config" Default="" Mode="rw" Description="" Type="Path" Display="advanced" Required="true" Mask="false">/mnt/user/appdata/qbittorrent</Config>
+  <Config Name="PUID" Target="PUID" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="true" Mask="false">99</Config>
+  <Config Name="PGID" Target="PGID" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="true" Mask="false">100</Config>
+  <Config Name="UMASK" Target="UMASK" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="true" Mask="false">022</Config>
+</Container>

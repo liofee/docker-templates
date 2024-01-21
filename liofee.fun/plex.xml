@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>plex</Name>
+  <Repository>linuxserver/plex:latest</Repository>
+  <Registry>https://hub.docker.com/r/linuxserver/plex</Registry>
+  <Network>host</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project/>
+  <Overview>Plex</Overview>
+  <Category/>
+  <WebUI>http://[IP]:[PORT:32400]/web</WebUI>
+  <TemplateURL>https://gitee.com/liofee/docker-templates/raw/master/liofee.fun/plex.xml</TemplateURL>
+  <Icon>https://gitee.com/liofee/docker-templates/raw/master/liofee.fun/img/plex-icon.png</Icon>
+  <ExtraParams>--add-host=api.themoviedb.org:54.192.18.12</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="VERSION" Target="VERSION" Default="" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">docker</Config>
+  <Config Name="TimeZone" Target="TZ" Default="" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">Asia/Shanghai</Config>
+  <Config Name="PLEX_CLAIM" Target="PLEX_CLAIM" Default="" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">claim-z2YgpDdd1tSxaTHcyxgd</Config>
+  <Config Name="Home" Target="/liofee" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/disk2/liofee/</Config>
+  <Config Name="GPU" Target="" Default="" Mode="" Description="" Type="Device" Display="always" Required="true" Mask="false">/dev/dri</Config>
+  <Config Name="Config" Target="/config" Default="" Mode="rw" Description="" Type="Path" Display="advanced" Required="true" Mask="false">/mnt/user/appdata/plex</Config>
+  <Config Name="PUID" Target="PUID" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="true" Mask="false">99</Config>
+  <Config Name="PGID" Target="PGID" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="true" Mask="false">100</Config>
+  <Config Name="UMASK" Target="UMASK" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="true" Mask="false">022</Config>
+</Container>

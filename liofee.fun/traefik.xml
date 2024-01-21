@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>traefik</Name>
+  <Repository>traefik:latest</Repository>
+  <Registry>https://hub.docker.com/_/traefik</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project/>
+  <Overview>Traefik</Overview>
+  <Category/>
+  <WebUI>http://[IP]:[PORT:8080]</WebUI>
+  <TemplateURL>https://gitee.com/liofee/docker-templates/raw/master/liofee.fun/traefik.xml</TemplateURL>
+  <Icon>https://gitee.com/liofee/docker-templates/raw/master/liofee.fun/img/traefik-icon.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="http" Target="80" Default="" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">4480</Config>
+  <Config Name="https" Target="443" Default="" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">4443</Config>
+  <Config Name="WebUI" Target="8080" Default="" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">8888</Config>  
+  <Config Name="docker.sock" Target="/var/run/docker.sock" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/var/run/docker.sock</Config>
+  <Config Name="Enable" Target="traefik.enable" Default="" Mode="" Description="" Type="Label" Display="always" Required="false" Mask="false">true</Config>
+  <Config Name="Network" Target="traefik.docker.network" Default="" Mode="" Description="" Type="Label" Display="always" Required="false" Mask="false">bridge</Config>
+  <Config Name="Entrypoints" Target="traefik.http.routers.traefik-secure.entrypoints" Default="" Mode="" Description="" Type="Label" Display="always" Required="false" Mask="false">websecure</Config>
+  <Config Name="Rule" Target="traefik.http.routers.traefik-secure.rule" Default="" Mode="" Description="" Type="Label" Display="always" Required="false" Mask="false">Host(`traefik.liofee.fun`)</Config>
+  <Config Name="Middlewares" Target="traefik.http.routers.traefik-secure.middlewares" Default="" Mode="" Description="" Type="Label" Display="always" Required="false" Mask="false">user-auth@file</Config>
+  <Config Name="Service" Target="traefik.http.routers.traefik-secure.service" Default="" Mode="" Description="" Type="Label" Display="always" Required="false" Mask="false">api@internal</Config>
+  <Config Name="DNSPOD_API_KEY" Target="DNSPOD_API_KEY" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">390668,c6aa87b35bfb282f1db9be2deca67754</Config>
+  <Config Name="Config" Target="/etc/traefik" Default="" Mode="rw" Description="" Type="Path" Display="advanced" Required="false" Mask="false">/mnt/user/appdata/traefik/</Config>
+  <Config Name="PUID" Target="PUID" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="true" Mask="false">99</Config>
+  <Config Name="PGID" Target="PGID" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="true" Mask="false">100</Config>
+  <Config Name="UMASK" Target="UMASK" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="true" Mask="false">022</Config>  
+</Container>
